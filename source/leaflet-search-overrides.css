@@ -1,0 +1,22 @@
+.search-button
+{
+    background-size: 52px !important;
+    width: 52px !important;
+    height: 52px !important;
+}
+
+.leaflet-control-search .search-input
+{
+    height: 44px !important;
+}
+
+.search-cancel
+{
+    right: 44px !important;
+    margin: 12px !important;
+}
+
+.leaflet-control-search .search-tip
+{
+    line-height: 25px !important;
+}

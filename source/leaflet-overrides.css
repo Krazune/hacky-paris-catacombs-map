@@ -1,0 +1,22 @@
+.leaflet-control-zoom .leaflet-bar
+{
+    width: 52px;
+}
+
+.leaflet-control-zoom a
+{
+    width: 52px !important;
+    height: 52px !important;
+    line-height: 52px !important;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out
+{
+    font-size: 30px !important;
+}
+
+.leaflet-control-layers-toggle
+{
+    width: 52px !important;
+    height: 52px !important;
+}
