@@ -55,7 +55,7 @@ function createBaseMap()
 		{
 			maxWidth: 250,
 			imperial: false,
-			updateWhenIdle: false
+			updateWhenIdle: true
 		}
 	).addTo(map);
 
