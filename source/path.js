@@ -15,9 +15,9 @@ function Path(map)
 		}
 	);
 
-	this.placeMarker = function (lat, lng)
+	this.placeMarker = function (lat, lng, date = Date.now())
 	{
-		const newMarker = this._createMarker(lat, lng).addTo(this._map);
+		const newMarker = this._createMarker(lat, lng, date).addTo(this._map);
 		const self = this;
 
 		newMarker.on('click', function ()
@@ -86,7 +86,8 @@ function Path(map)
 			const coordinates =
 			{
 				lat: latLng.lat,
-				lng: latLng.lng
+				lng: latLng.lng,
+				date: this._markers[i].options.date
 			};
 
 			pathCoordinates.push(coordinates);
@@ -101,7 +102,7 @@ function Path(map)
 
 		for (let i = 0; i < markersCoordinates.length; ++i)
 		{
-			this.placeMarker(markersCoordinates[i].lat, markersCoordinates[i].lng);
+			this.placeMarker(markersCoordinates[i].lat, markersCoordinates[i].lng, markersCoordinates[i].date);
 		}
 	}
 
@@ -125,12 +126,13 @@ function Path(map)
 		).addTo(this._map);
 	}
 
-	this._createMarker = function (lat, lng)
+	this._createMarker = function (lat, lng, date = Date.now())
 	{
 		return L.marker(
 			L.latLng(lat, lng),
 			{
-				icon: this._markerIcon
+				icon: this._markerIcon,
+				date: date
 			}
 		)
 	}
