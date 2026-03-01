@@ -12,7 +12,7 @@ It is meant to be used (don't) on a phone without access to the internet or GPS,
 
 ## Version
 
-Current version: **2025.11.1**
+Current version: **2026.03.1**
 
 _The version format is "\<year\>.\<zero padded month\>.\<build number starting at 1\>"._
 
